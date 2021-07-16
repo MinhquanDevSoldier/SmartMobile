@@ -8,7 +8,7 @@ class Sanpham extends CI_Controller {
         $this->load->model('frontend/Mcategory');
         $this->data['com']='sanpham';
         $this->load->library('session');
-        $this->load->library('Phantrang');
+        $this->load->library('phantrang');
     }
     
     public function index(){
@@ -29,12 +29,12 @@ class Sanpham extends CI_Controller {
                 $od='desc';
             }
         }
-        $this->load->library('Phantrang');
+        $this->load->library('phantrang');
         $limit=12;
-        $current=$this->Phantrang->PageCurrent();
-        $first=$this->Phantrang->PageFirst($limit, $current);
+        $current=$this->phantrang->PageCurrent();
+        $first=$this->phantrang->PageFirst($limit, $current);
         $total=$this->Mproduct->product_sanpham_count();
-        $this->data['strphantrang']=$this->Phantrang->PagePer($total, $current, $limit, $url='san-pham');
+        $this->data['strphantrang']=$this->phantrang->PagePer($total, $current, $limit, $url='san-pham');
         $this->data['list']=$this->Mproduct->product_sanpham($limit,$first,$f,$od);
         $this->data['title']='Smart Store - Tất cả sản phẩm';
         $this->data['view']='index';
@@ -72,10 +72,10 @@ class Sanpham extends CI_Controller {
         
         $this->load->library('phantrang');
         $limit=12;
-        $current=$this->Phantrang->PageCurrent();
-        $first=$this->Phantrang->PageFirst($limit, $current);
+        $current=$this->phantrang->PageCurrent();
+        $first=$this->phantrang->PageFirst($limit, $current);
         $total=$this->Mproduct->product_chude_count($listcat);
-        $this->data['strphantrang']=$this->Phantrang->PagePer($total, $current, $limit, $url='san-pham/'.$link);
+        $this->data['strphantrang']=$this->phantrang->PagePer($total, $current, $limit, $url='san-pham/'.$link);
         $this->data['list']=$this->Mproduct->product_list_cat_limit($listcat, $limit,$first,$f,$od);
         $this->data['title']='Smart Store - Sản phẩm theo từng danh mục';  
         $this->data['view']='category';
