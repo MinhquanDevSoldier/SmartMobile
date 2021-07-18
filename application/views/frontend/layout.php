@@ -42,7 +42,7 @@
           js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.8";
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
-        <script>alert("Website được tạo ra nhằm phục vụ môn học Lập trình mã nguồn mỡ vui lòng không xem đây là trang thương mại điện tử")</script>
+        
         <!-- TOPBAR -->
         <?php 
             $this->load->view('frontend/modules/topbar');
