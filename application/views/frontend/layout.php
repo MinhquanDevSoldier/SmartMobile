@@ -10,13 +10,16 @@
     <title>
         <?php 
             if(isset($title))
+            {
                 echo $title;
                 echo '
                     <script>alert("Website được tạo ra nhằm phục vụ môn học Lập trình mã nguồn mỡ vui lòng không xem đây là trang thương mại điện tử")</script>
                 ';
+            }
             else
-                
+            {
                 echo "Smart Store - Điện thoại, Laptop, Link kiện chính hãng";
+            }
         ?>
     </title>
     <link rel="icon" type="image/x-icon" href="public/images/cart2.png">
