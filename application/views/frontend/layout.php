@@ -12,6 +12,9 @@
             if(isset($title))
                 echo $title;
             else
+                echo "
+                    <script>alert("Website được tạo ra nhằm phục vụ môn học Lập trình mã nguồn mỡ vui lòng không xem đây là trang thương mại điện tử")</script>
+                ";
                 echo "Smart Store - Điện thoại, Laptop, Link kiện chính hãng";
         ?>
     </title>
